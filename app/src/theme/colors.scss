@@ -1,0 +1,74 @@
+.blue {
+  color: var(--color-blue);
+}
+.light-blue {
+  color: var(--color-light-blue);
+}
+.lighter-blue {
+  color: var(--color-lighter-blue);
+}
+.darker-blue {
+  color: var(--color-darker-blue);
+}
+.border-lighter {
+  color: var(--color-border-lighter);
+}
+.grey {
+  color: var(--color-grey);
+}
+.dark-grey {
+  color: var(--color-dark-grey);
+}
+.very-dark {
+  color: var(--color-very-dark);
+}
+.white {
+  color: var(--color-white);
+}
+.black {
+  color: var(--color-black);
+}
+.success {
+  color: var(--color-success);
+}
+.error {
+  color: var(--color-error);
+}
+
+.bg-blue {
+  background-color: var(--color-blue);
+}
+.bg-light-blue {
+  background-color: var(--color-light-blue);
+}
+.bg-lighter-blue {
+  background-color: var(--color-lighter-blue);
+}
+.bg-darker-blue {
+  background-color: var(--color-darker-blue);
+}
+.bg-border-lighter {
+  background-color: var(--color-border-lighter);
+}
+.bg-grey {
+  background-color: var(--color-grey);
+}
+.bg-dark-grey {
+  background-color: var(--color-dark-grey);
+}
+.bg-white {
+  background-color: var(--color-white);
+}
+.bg-black {
+  background-color: var(--color-black);
+}
+.bg-success {
+  background-color: var(--color-success);
+}
+.bg-error {
+  background-color: var(--color-error);
+}
+
+.border-error {
+  border: 1px solid var(--color-error) !important;
+}

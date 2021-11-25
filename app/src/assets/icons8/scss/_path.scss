@@ -1,0 +1,21 @@
+// Font paths
+// -------------------------
+
+@font-face {
+  font-family: "Discovery";
+  src: url("../fonts/Discovery.eot");
+  src: url("../fonts/Discovery.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/Discovery.woff2") format("woff2"),
+  url("../fonts/Discovery.woff") format("woff"),
+  url("../fonts/Discovery.ttf") format("truetype"),
+  url("../fonts/Discovery.svg#font") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Discovery";
+    src: url("../fonts/Discovery.svg#Discovery") format("svg");
+  }
+}

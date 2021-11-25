@@ -1,0 +1,61 @@
+<app-default-layout>
+  <div class="sub-content">
+    <div class="subtitle">Connexion</div>
+    <div>
+      <div class="title">Identifiant</div>
+      <div class="input input-login">
+        <input id="codeCustomer" type="tel" pattern="[0-9]*" maxlength="4"
+          [(ngModel)]="codeCustomer" />
+        <div class="clear" (click)="clearCodeCustomer()">
+          <i class="icons8-cancel"></i>
+        </div>
+      </div>
+    </div>
+    <div>
+    </div>
+    <div>
+      <div class="title">
+        Mot de passe
+      </div>
+      <div class="input input-login">
+        <input id="codeId" [ngClass]="{ disabled: codeCustomer.length !== 4 }"
+          pattern="[0-9]*" [(ngModel)]="codeId" maxlength="8" type="tel" />
+        <div class="clear" (click)="clearCodeId()">
+          <i class="icons8-cancel"></i>
+        </div>
+      </div>
+    </div>
+    <div class="pin-container">
+      <div class="title">yes
+      </div>
+      <div class="input input-login">
+        <input [ngClass]="{ disabled: codeId.length !== 8 || codeCustomer.length !== 4}" [(ngModel)]="codePin"
+          type="password" maxlength="4" disabled />
+        <div class="clear" (click)="clearCodePin()">
+          <i class="icons8-cancel"></i>
+        </div>
+      </div>
+    </div>
+    <div class="error error-block" *ngIf="error">
+      erreur
+    </div>
+    <div class="checkbox-container">
+      <input class="styled-checkbox" [(ngModel)]="remember" (ngModelChange)="saveRemember($event)" type="checkbox"
+        id="checkbox" />
+      <label class="label" for="checkbox">erreur</label>
+    </div>
+    <div class="button"
+      [ngClass]="{ disabled: codeId.length !== 8 || codeCustomer.length !== 4 || codePin.length !==4 }"
+      (click)="login()">
+      <i *ngIf="loading" class="material-icons spin">...</i>
+      <span *ngIf="!loading">yes</span>
+    </div>
+    <div class="secondary-button" (click)="openGetIdsModal()">
+      yes
+    </div>
+  </div>
+</app-default-layout>
+
+<app-code-request *ngIf="getIdsModalOpened" (closePopup)="closeGetIdsModal()"
+  (clientCodeSuccess)="fillCodeCustomer($event)">
+</app-code-request>
