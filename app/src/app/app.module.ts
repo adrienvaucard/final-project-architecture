@@ -5,11 +5,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AuthentificationComponent } from './authentification/authentification.component';
-import { CodeRequestComponent } from './code-request/code-request.component';
+import { AuthentificationComponent } from './components/authentification/authentification.component';
+import { RegisterComponent } from './components/register/register.component';
 import { DefaultLayoutComponent } from './layouts/default-layout/default-layout.component';
-import { LoadingComponent } from './_shared/loading/loading.component';
-import { PopupComponent } from './_shared/popup/popup.component';
+import { LoadingComponent } from './components/loading/loading.component';
+import { PopupComponent } from './components/popup/popup.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +17,7 @@ import { PopupComponent } from './_shared/popup/popup.component';
     PopupComponent,
     AuthentificationComponent,
     LoadingComponent,
-    CodeRequestComponent,
+    RegisterComponent,
     DefaultLayoutComponent,
   ],
   imports: [

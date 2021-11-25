@@ -1,0 +1,75 @@
+<app-popup *ngIf="!successPopup" [height]="windowWidth > 900 ? '400px' : '60%'"
+  [width]="windowWidth > 900 ? '400px' : '85%'" [title]="'Inscription'"
+  (closePopup)="closeModal()">
+  <div popup-content class="popup-content label dark-grey">
+    <div class="align-left flex-page">
+      <div>
+        <div class="title very-dark medium-text">Identifiant</div>
+        <div class="input input-login input-get-ids">
+          <input
+            id="login" [(ngModel)]="login" />
+          <div class="clear" (click)="clearlogin()">
+            <i class="icons8-cancel"></i>
+          </div>
+        </div>
+      </div>
+
+
+      <div>
+        <div class="title very-dark medium-text">Mot de passe</div>
+        <div class="input input-login input-get-ids">
+          <input id="password" type="password" [(ngModel)]="password" />
+          <div class="clear" (click)="clearpassword()">
+            <i class="icons8-cancel"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="error center" [ngClass]="{'visibility-hidden' : !formError}">
+        <span *ngIf="formError">Un problème est survenu</span>
+        <span *ngIf="!formError">&nbsp;</span>
+      </div>
+
+      <div class="secondary-button completed-button" (click)="register()">
+        S'inscrire
+      </div>
+    </div>
+  </div>
+</app-popup>
+
+<app-popup *ngIf="successPopup" [width]="windowWidth > 900 ? '400px' : '85%'"
+  (closePopup)="closeModal()">
+  <div popup-content class="popup-content label dark-grey center">
+    <div class="semi-bold subtitle-text">Votre inscription est confirmée
+      <span class="blue">Bienvenue</span>
+    </div>
+    <div class=margin-top-m>
+      GG
+    </div>
+  </div>
+</app-popup>
+
+<app-popup *ngIf="errorPopup" [width]="windowWidth > 900 ? '400px' : '85%'"
+  (closePopup)="closeErrorModal()">
+  <div popup-content class="popup-content label dark-grey center">
+    <ng-container *ngIf="errorType === 'FormError'">
+      <div class="semi-bold subtitle-text error">
+        Un problème est survenue
+      </div>
+      <div class="dark-grey margin-top-s">
+        <span>{{ formError }}</span>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="errorType !== 'FormError'">
+      <div class="semi-bold subtitle-text error">
+        {{ errorType }}
+      </div>
+      <div class="dark-grey margin-top-s">
+      {{ apiErrorMessage }}
+      </div>
+    </ng-container>
+  </div>
+</app-popup>
+
+<popup-loading *ngIf="loading"></popup-loading>
