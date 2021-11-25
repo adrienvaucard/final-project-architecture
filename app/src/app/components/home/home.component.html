@@ -1,0 +1,46 @@
+<app-default-layout>
+    <div class="sub-content">
+        <div class="subtitle">Accueil</div>
+        <div>
+            <div class="title">Nombre de questions</div>
+            <form action="#" class="radio-container">
+              <div>
+                <input type="radio" id="5" name="radio-group" value="5" [(ngModel)]="questionsNumber"
+                  checked>
+                <label class="option" for="5">5</label>
+              </div>
+              <div>
+                <input type="radio" id="10" name="radio-group" value="10" [(ngModel)]="questionsNumber">
+                <label class="option" for="10">10</label>
+              </div>
+              <div>
+                <input type="radio" id="20" name="radio-group" value="20" [(ngModel)]="questionsNumber">
+                <label class="option" for="20">20</label>
+              </div>
+            </form>
+        </div>
+
+        <div>
+            <div class="title">Thème</div>
+            <form action="#" class="radio-container">
+              <div>
+                <input type="radio" id="burgerQuiz" name="radio-group" value="burgerQuiz" [(ngModel)]="theme"
+                  checked>
+                <label class="option" for="burgerQuiz">Burger Quiz</label>
+              </div>
+              <div>
+                <input type="radio" id="other" name="radio-group" value="other" [(ngModel)]="theme">
+                <label class="option" for="other">Autre</label>
+              </div>
+            </form>
+        </div>
+
+        <div class="button"
+            (click)="play()">
+            <span>Jouer</span>
+        </div>
+    </div>
+
+</app-default-layout>
+
+<popup-loading *ngIf="loading"></popup-loading>

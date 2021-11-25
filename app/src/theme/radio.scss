@@ -25,11 +25,11 @@
 }
 
 [type="radio"]:checked + label {
-  color: var(--color-blue);
+  color: var(--color-white);
 }
 
 [type="radio"]:not(:checked) + label {
-  color: var(--color-very-dark);
+  color: var(--color-white);
 }
 
 [type="radio"]:checked + label:before,
