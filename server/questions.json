@@ -1199,6 +1199,486 @@
         }
       ],
       "answer": 4
+    },
+    {
+      "id": 51,
+      "theme": "Marvel",
+      "question": "Comment se nomme le méchant qu’affrontent les Avengers dans leur second film ?",
+      "proposals" : [
+        {
+          "id": 1,
+          "text": "Tron"
+        },
+        {
+          "id": 2,
+          "text": "Loki"
+        },
+        {
+          "id": 3,
+          "text": "Thanos"
+        },
+        {
+          "id": 4,
+          "text": "Ultron"
+        }
+      ],
+      "answer": 4
+    },
+    {
+      "id": 52,
+      "theme": "Marvel",
+      "question": "Quel acteur incarne Thor ?",
+      "proposals" : [
+        {
+          "id": 1,
+          "text": "Samuel L. Jackson"
+        },
+        {
+          "id": 2,
+          "text": "Mark Ruffalo"
+        },
+        {
+          "id": 3,
+          "text": "Chris Evans"
+        },
+        {
+          "id": 4,
+          "text": "Chris Hemsworth"
+        }
+      ],
+      "answer": 4
+    },
+    {
+      "id": 53,
+      "theme": "Marvel",
+      "question": "Quel est le nom de ce membre des Gardiens de la Galaxie qui a l’apparence d’un raton-laveur ?",
+      "proposals" : [
+        {
+          "id": 1,
+          "text": "Nasty Raccoon"
+        },
+        {
+          "id": 2,
+          "text": "Burning Raccoon"
+        },
+        {
+          "id": 3,
+          "text": "Rocket Raccoon"
+        },
+        {
+          "id": 4,
+          "text": "Pocket Raccoon"
+        }
+      ],
+      "answer": 3
+    },
+    {
+      "id": 54,
+      "theme": "Marvel",
+      "question": "Quelle est la particularité de Daredevil ?",
+      "proposals" : [
+        {
+          "id": 1,
+          "text": "Il est sourd"
+        },
+        {
+          "id": 2,
+          "text": "Il est aveugle"
+        },
+        {
+          "id": 3,
+          "text": "Il peut voir l'avenir"
+        },
+        {
+          "id": 4,
+          "text": "Il est muet"
+        }
+      ],
+      "answer": 2
+    },
+    {
+      "id": 55,
+      "theme": "Marvel",
+      "question": "Lequel de ces personnages Marvel a la particularité de prendre feu lorsqu’il se transforme ?",
+      "proposals" : [
+        {
+          "id": 1,
+          "text": "Daredevil"
+        },
+        {
+          "id": 2,
+          "text": "GhostRider"
+        },
+        {
+          "id": 3,
+          "text": "Daredevil"
+        },
+        {
+          "id": 4,
+          "text": "Iron fist"
+        }
+      ],
+      "answer": 2
+    },
+    {
+      "id": 56,
+      "theme": "Marvel",
+      "question": "Comment se nomme l’organisation que combat Captain America dans ses deux films ?",
+      "proposals" : [
+        {
+          "id": 1,
+          "text": "Hydra"
+        },
+        {
+          "id": 2,
+          "text": "Phoenix"
+        },
+        {
+          "id": 3,
+          "text": "Les Flag-Smashers"
+        },
+        {
+          "id": 4,
+          "text": "Le SHIELD"
+        }
+      ],
+      "answer": 1
+    },
+    {
+      "id": 57,
+      "theme": "Marvel",
+      "question": "Comment se nomme le logiciel d’intelligence artificielle qui assiste Iron Man dans toutes ses tâches ?",
+      "proposals" : [
+        {
+          "id": 1,
+          "text": "G.L.A.D.I.S"
+        },
+        {
+          "id": 2,
+          "text": "Silver"
+        },
+        {
+          "id": 3,
+          "text": "Jarvis"
+        },
+        {
+          "id": 4,
+          "text": "Picture"
+        }
+      ],
+      "answer": 3
+    },
+    {
+      "id": 58,
+      "theme": "Marvel",
+      "question": "Comment s'appelle le cube localisé sur Terre et qui renferme une pierre d'infini ",
+      "proposals" : [
+        {
+          "id": 1,
+          "text": "L'Eliacube"
+        },
+        {
+          "id": 2,
+          "text": "l'Holocron"
+        },
+        {
+          "id": 3,
+          "text": "Le Tesseract"
+        },
+        {
+          "id": 4,
+          "text": "L'Ether"
+        }
+      ],
+      "answer": 3
+    },
+    {
+      "id": 59,
+      "theme": "Marvel",
+      "question": "Le squelette de Wolverine a été renforcé avec :",
+      "proposals" : [
+        {
+          "id": 1,
+          "text": "Du vibranium"
+        },
+        {
+          "id": 2,
+          "text": "De l'adanium"
+        },
+        {
+          "id": 3,
+          "text": "De l'adamantium"
+        },
+        {
+          "id": 4,
+          "text": "Du vinium"
+        }
+      ],
+      "answer": 3
+    },
+    {
+      "id": 60,
+      "theme": "Marvel",
+      "question": "Quel est le vrai nom du personnage de Black Widow ?",
+      "proposals" : [
+        {
+          "id": 1,
+          "text": "Masha Romanoff"
+        },
+        {
+          "id": 2,
+          "text": "Elena Romanoff"
+        },
+        {
+          "id": 3,
+          "text": "Anastas Romanoff"
+        },
+        {
+          "id": 4,
+          "text": "Natasha Romanoff"
+        }
+      ],
+      "answer": 4
+    },
+    {
+      "id": 61,
+      "theme": "Marvel",
+      "question": "Comment se nomme la compagne d’Iron Man ?",
+      "proposals" : [
+        {
+          "id": 1,
+          "text": "Pepper"
+        },
+        {
+          "id": 2,
+          "text": "Jane"
+        },
+        {
+          "id": 3,
+          "text": "Carole"
+        },
+        {
+          "id": 4,
+          "text": "Anna"
+        }
+      ],
+      "answer": 1
+    },
+    {
+      "id": 62,
+      "theme": "Marvel",
+      "question": "Quel acteur incarne le super-héros Ant-Man à l’écran ?",
+      "proposals" : [
+        {
+          "id": 1,
+          "text": "Michael Douglas"
+        },
+        {
+          "id": 2,
+          "text": "Paul Rudd"
+        },
+        {
+          "id": 3,
+          "text": "Sean Penn"
+        },
+        {
+          "id": 4,
+          "text": "Dominic Purcell"
+        }
+      ],
+      "answer": 2
+    },
+    {
+      "id": 63,
+      "theme": "Marvel",
+      "question": "Dans le premier opus d’Iron Man, Tony Stark est spécialisé :",
+      "proposals" : [
+        {
+          "id": 1,
+          "text": "Dans la fabrication et la vente d'armement"
+        },
+        {
+          "id": 2,
+          "text": "Dans la production et la réalisation de films"
+        },
+        {
+          "id": 3,
+          "text": "Dans la fabrication et la vente de médicaments"
+        },
+        {
+          "id": 4,
+          "text": "Dans la fabrication et la vente d'automobiles"
+        }
+      ],
+      "answer": 1
+    },
+    {
+      "id": 64,
+      "theme": "Marvel",
+      "question": "Comment se nomme le frère de Thor ?",
+      "proposals" : [
+        {
+          "id": 1,
+          "text": "Floki"
+        },
+        {
+          "id": 2,
+          "text": "Moki"
+        },
+        {
+          "id": 3,
+          "text": "Loki"
+        },
+        {
+          "id": 4,
+          "text": "Rocki"
+        }
+      ],
+      "answer": 3
+    },
+    {
+      "id": 65,
+      "theme": "Marvel",
+      "question": "Quel est le nom du royaume de Thor ?",
+      "proposals" : [
+        {
+          "id": 1,
+          "text": "Asgard"
+        },
+        {
+          "id": 2,
+          "text": "Jotunheim"
+        },
+        {
+          "id": 3,
+          "text": "Midgard"
+        },
+        {
+          "id": 4,
+          "text": "Nidavellir"
+        }
+      ],
+      "answer": 1
+    },
+    {
+      "id": 66,
+      "theme": "Marvel",
+      "question": "Quel anti-héros est incarné par Ryan Reynolds ?",
+      "proposals" : [
+        {
+          "id": 1,
+          "text": "Starfox"
+        },
+        {
+          "id": 2,
+          "text": "Iron fist"
+        },
+        {
+          "id": 3,
+          "text": "Deadpool"
+        },
+        {
+          "id": 4,
+          "text": "Daredevil"
+        }
+      ],
+      "answer": 3
+    },
+    {
+      "id": 67,
+      "theme": "Marvel",
+      "question": "Qui est Nick Fury ?",
+      "proposals" : [
+        {
+          "id": 1,
+          "text": "Un membre d'Hydra"
+        },
+        {
+          "id": 2,
+          "text": "Le directeur du Shield"
+        },
+        {
+          "id": 3,
+          "text": "Le frère de Black Widow"
+        },
+        {
+          "id": 4,
+          "text": "Un agent de sécurité d'Iron Man"
+        }
+      ],
+      "answer": 2
+    },
+    {
+      "id": 68,
+      "theme": "Marvel",
+      "question": "Laquelle de ces pierres n'est pas une pierre d'infinité ?",
+      "proposals" : [
+        {
+          "id": 1,
+          "text": "Pierre de pouvoir"
+        },
+        {
+          "id": 2,
+          "text": "Pierre du temps"
+        },
+        {
+          "id": 3,
+          "text": "Pierre de l'esprit"
+        },
+        {
+          "id": 4,
+          "text": "Pierre du destin"
+        }
+      ],
+      "answer": 4
+    },
+    {
+      "id": 69,
+      "theme": "Marvel",
+      "question": "Quelle organisation Iron Fist affronte avec d'autres héros Marvel dans la série \",The Defenders\", ?",
+      "proposals" : [
+        {
+          "id": 1,
+          "text": "La colonne"
+        },
+        {
+          "id": 2,
+          "text": "La sphère"
+        },
+        {
+          "id": 3,
+          "text": "La main"
+        },
+        {
+          "id": 4,
+          "text": "Hydra"
+        }
+      ],
+      "answer": 3
+    },
+    {
+      "id": 70,
+      "theme": "Marvel",
+      "question": "Comment s'appelle la fille illégitime de Thanos, qu'il offre en sacrifice à la pierre de l'âme ?",
+      "proposals" : [
+        {
+          "id": 1,
+          "text": "Gorgona"
+        },
+        {
+          "id": 2,
+          "text": "Nébula"
+        },
+        {
+          "id": 3,
+          "text": "Groot"
+        },
+        {
+          "id": 4,
+          "text": "Gamora"
+        }
+      ],
+      "answer": 4
     }
   ]
 }
