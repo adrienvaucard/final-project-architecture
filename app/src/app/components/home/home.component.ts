@@ -18,8 +18,6 @@ export class HomeComponent implements OnInit {
 
   constructor(private router: Router) { }
 
-
-
   ngOnInit(): void {
     this.getProfile()
   }
@@ -27,11 +25,13 @@ export class HomeComponent implements OnInit {
   public play() {
     this.loading = true;
     try {
+      localStorage.setItem("questionGame", this.questionsNumber);
+      localStorage.setItem("theme", this.theme);
       this.router.navigate(['game']);
       // launch game with questionsNumber and theme
-      
+
     } catch (error) {
-      
+
     }
   }
 
