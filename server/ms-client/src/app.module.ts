@@ -18,6 +18,7 @@ import { UserModule } from './user/user.module';
     ConfigModule.forRoot(),
     ClientsModule.register([
       { name: 'AUTH_SERVICE', transport: Transport.TCP},
+      { name: 'GAME_SERVICE', transport: Transport.TCP},
     ]),
     AuthModule,
     UserModule
