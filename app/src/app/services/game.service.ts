@@ -8,7 +8,7 @@ import { Injectable } from '@angular/core';
 export class GameService {
   constructor(private http: HttpClient) {}
 
-  public newGame(questionNumber: string | null, theme: string | null, token: string | null) {
+  public newGame(questionsNumber: string | null, theme: string | null, token: string | null) {
 
     const headers = new HttpHeaders({
       Authorization: "Bearer " + token
@@ -16,7 +16,7 @@ export class GameService {
     let request = this.http.post(
       `localhost:3000/games`,
       {
-        questionNumber: questionNumber,
+        questionsNumber: questionsNumber,
         theme: theme
       },
       {

@@ -4,6 +4,7 @@ import {
   HostListener, Output
 } from '@angular/core';
 import { Router } from '@angular/router';
+import {AuthenticationService} from "../../services/authentication.service";
 
 @Component({
   selector: 'app-register',
@@ -11,7 +12,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./register.component.scss'],
 })
 export class RegisterComponent {
-  public windowWidth;
+  public windowWidth: any;
   public login = '';
   public password = '';
   public errorType = '';
@@ -25,7 +26,7 @@ export class RegisterComponent {
   @Output() closePopup = new EventEmitter();
   @Output() loginSuccess = new EventEmitter();
 
-  constructor( private router: Router
+  constructor( private router: Router, private auth: AuthenticationService
   ) {
     this.windowWidth = window.innerWidth;
   }
@@ -62,7 +63,15 @@ export class RegisterComponent {
     this.loading = true;
     try {
       this.router.navigate(['home']);
-      // register to do
+      this.auth.signup(this.login, this.password).subscribe((result: any) => {
+        if (result.statusCode != '200') {
+          this.launchError(result.error);
+          this.errorPopup = true;
+          this.loading = false;
+        } else {
+          this.closeModal();
+        }
+      })
     } catch (error) {
       this.launchError(error);
       this.errorPopup = true;

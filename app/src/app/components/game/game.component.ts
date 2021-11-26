@@ -41,6 +41,9 @@ export class GameComponent implements OnInit {
 
     localStorage.setItem("result", String(goodAnswers));
 
+    const result = localStorage.getItem("result");
+
+
     // envoi du résultat au serveur
 
     this.router.navigate(['results']);

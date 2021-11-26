@@ -12,17 +12,16 @@ export class ResultsComponent implements OnInit {
   public goodAnswers: number | null = null;
   public loading: boolean = false;
 
-  constructor(private router: Router) { 
+  constructor(private router: Router) {
   }
-  
+
   ngOnInit(): void {
     this.getResults();
-    
+
   }
 
   public getResults() {
-    this.result = 'Bravo';
-    this.goodAnswers = 7;
+
     return
   }
 

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import {UserService} from "../../services/user.service";
+import jwt_decode from "jwt-decode";
 
 @Component({
   selector: 'app-home',
@@ -9,14 +11,14 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
 
   public questionsNumber: '5' | '10' | '20' = '5';
-  public theme: 'burgerQuiz' | 'marvel' = 'burgerQuiz';
+  public theme: 'Burger Quiz' | 'Marvel' = 'Burger Quiz';
   public loading = false;
 
-  public gameNumber: string = '0';
-  public goodAnswers: string = '0';
-  public averageScore: string = '0';
+  public gameNumber: string | null = '0';
+  public goodAnswers: string | null = '0';
+  public averageScore: string | null = '0';
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private userService: UserService) { }
 
   ngOnInit(): void {
     this.getProfile()
@@ -25,18 +27,26 @@ export class HomeComponent implements OnInit {
   public play() {
     this.loading = true;
     try {
-      localStorage.setItem("questionGame", this.questionsNumber);
+      localStorage.setItem("questionsNumber", this.questionsNumber);
       localStorage.setItem("theme", this.theme);
       this.router.navigate(['game']);
-      // launch game with questionsNumber and theme
-
     } catch (error) {
 
     }
   }
 
   public getProfile() {
-    //to do
-  }
+    this.loading = true;
+    try {
+      let decodedToken = jwt_decode(<string>localStorage.getItem("token"));
+      console.log(decodedToken);
 
+      // @ts-ignore
+      const response = this.userService.retrieveStats(token, token.sub);
+
+      //return response.data;
+    } catch (error) {
+
+    }
+  }
 }
