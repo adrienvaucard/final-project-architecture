@@ -12,6 +12,8 @@ export class ResultsComponent implements OnInit {
   public goodAnswers: any = null;
   public loading: boolean = false;
 
+  public questionList: any = [];
+
   constructor(private router: Router) {
   }
 
@@ -21,6 +23,10 @@ export class ResultsComponent implements OnInit {
   }
 
   public getResults() {
+    const questions: any = localStorage.getItem("questions")
+
+    this.questionList = JSON.parse(questions)
+    console.log(questions, this.questionList)
     this.goodAnswers = localStorage.getItem("result")
     const questionsNumber: any = localStorage.getItem("questionsNumber")
     if (parseInt(this.goodAnswers) < (parseInt(questionsNumber) / 2)) {

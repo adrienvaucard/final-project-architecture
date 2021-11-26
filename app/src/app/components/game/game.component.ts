@@ -46,6 +46,8 @@ export class GameComponent implements OnInit {
 
     localStorage.setItem("result", String(goodAnswers));
 
+    localStorage.setItem('questions', JSON.stringify(this.questionList))
+
     this.router.navigate(['results']);
   }
 
