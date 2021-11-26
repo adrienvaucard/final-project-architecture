@@ -1,0 +1,27 @@
+<app-default-layout>
+    <div class="sub-content">
+        <div class="subtitle">Questions</div>
+
+        <div *ngFor="let question of questionList">
+        <div>
+            <div class="title">{{question.question}}</div>
+            <form action="{{question.id}}" class="radio-container">
+                <div *ngFor="let answer of question.proposals">
+                <div class="sub-radio">
+                  <input type="radio" name="radio-group" id="{{question.id}}-{{answer.id}}" [(ngModel)]="question.chosenAnswer" [value]="answer.id">
+                  <label class="option" for="{{question.id}}-{{answer.id}}">{{answer.text}}</label>
+                </div>
+            </div>
+            </form>
+        </div>
+        </div>
+
+        <div class="button"
+            (click)="validate()">
+            <span>Valider mes réponses</span>
+        </div>
+    </div>
+
+</app-default-layout>
+
+<popup-loading *ngIf="loading"></popup-loading>

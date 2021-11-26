@@ -11,6 +11,7 @@ import { DefaultLayoutComponent } from './layouts/default-layout/default-layout.
 import { LoadingComponent } from './components/loading/loading.component';
 import { PopupComponent } from './components/popup/popup.component';
 import { HomeComponent } from './components/home/home.component';
+import { GameComponent } from './components/game/game.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { HomeComponent } from './components/home/home.component';
     RegisterComponent,
     DefaultLayoutComponent,
     HomeComponent,
+    GameComponent,
   ],
   imports: [
     BrowserModule,

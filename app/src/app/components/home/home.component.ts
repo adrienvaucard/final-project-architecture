@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -15,7 +16,7 @@ export class HomeComponent implements OnInit {
   public goodAnswers: string = '0';
   public averageScore: string = '0';
 
-  constructor() { }
+  constructor(private router: Router) { }
 
 
 
@@ -24,9 +25,14 @@ export class HomeComponent implements OnInit {
   }
 
   public play() {
-    console.log(this.questionsNumber, this.theme)
     this.loading = true;
-    // launch game with questionsNumber and theme
+    try {
+      this.router.navigate(['game']);
+      // launch game with questionsNumber and theme
+      
+    } catch (error) {
+      
+    }
   }
 
   public getProfile() {
