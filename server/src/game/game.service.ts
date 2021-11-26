@@ -16,6 +16,7 @@ export class GameService {
   }
 
   create(createGameDto: CreateGameDto) {
+    // Retrieve theme and questions number
     return this.databaseConnection.push("/games[]", {
       id: uuidv4(),
       date: new Date(),

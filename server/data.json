@@ -1225,7 +1225,9 @@
     ],
     "users": [
         {
-            "id"
+            "id": "37b4b871-663c-42f7-843c-f304f07ba8b4",
+            "username": "johndoe",
+            "password": "$2b$10$zJZ0zX8GrUWy4AGT/n2jxeMVQC15G4bR87wAGsT2HQYDa1u7stoBu"
         }
     ]
 }
