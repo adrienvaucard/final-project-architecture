@@ -9,21 +9,31 @@ import { Router } from '@angular/router';
 export class ResultsComponent implements OnInit {
 
   public result: 'Bravo' | 'Dommage' | null = null;
-  public goodAnswers: number | null = null;
+  public goodAnswers: any = null;
   public loading: boolean = false;
 
-  constructor(private router: Router) { 
+  public questionList: any = [];
+
+  constructor(private router: Router) {
   }
-  
+
   ngOnInit(): void {
     this.getResults();
-    
+
   }
 
   public getResults() {
-    this.result = 'Bravo';
-    this.goodAnswers = 7;
-    return
+    const questions: any = localStorage.getItem("questions")
+
+    this.questionList = JSON.parse(questions)
+    console.log(questions, this.questionList)
+    this.goodAnswers = localStorage.getItem("result")
+    const questionsNumber: any = localStorage.getItem("questionsNumber")
+    if (parseInt(this.goodAnswers) < (parseInt(questionsNumber) / 2)) {
+      this.result = 'Dommage'
+    } else {
+      this.result = 'Bravo'
+    }
   }
 
   public goHome() {

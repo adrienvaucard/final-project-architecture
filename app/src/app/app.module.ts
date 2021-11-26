@@ -14,6 +14,8 @@ import { RegisterComponent } from './components/register/register.component';
 import { ResultsComponent } from './components/results/results.component';
 import { DefaultLayoutComponent } from './layouts/default-layout/default-layout.component';
 import { AuthenticationService } from './services/authentication.service';
+import { GameService } from "./services/game.service";
+import {UserService} from "./services/user.service";
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { AuthenticationService } from './services/authentication.service';
     HttpClientModule,
   ],
   providers: [
-    AuthenticationService
+    AuthenticationService,
+    GameService,
+    UserService
   ],
   bootstrap: [AppComponent]
 })

@@ -9,7 +9,7 @@ export class AuthenticationService {
 
   public signin(username: string, password: string) {
     return this.http.post(
-      `localhost:3000/auth/signin`,
+      `http://localhost:3000/auth/login`,
       {
           username,
           password
@@ -19,7 +19,7 @@ export class AuthenticationService {
 
   public signup(username: string, password: string) {
     return this.http.post(
-      `localhost:3000/auth/signup`,
+      `http://localhost:3000/auth/register`,
       {
           username,
           password
