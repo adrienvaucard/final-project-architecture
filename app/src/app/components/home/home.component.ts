@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   public questionsNumber: '5' | '10' | '20' = '5';
-  public theme: 'burgerQuiz' | 'other' = 'burgerQuiz';
+  public theme: 'burgerQuiz' | 'marvel' = 'burgerQuiz';
   public loading = false;
 
   public gameNumber: string = '0';

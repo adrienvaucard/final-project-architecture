@@ -27,8 +27,8 @@
                 <label class="option" for="burgerQuiz">Burger Quiz</label>
               </div>
               <div>
-                <input type="radio" id="other" name="radio-group" value="other" [(ngModel)]="theme">
-                <label class="option" for="other">Autre</label>
+                <input type="radio" id="marvel" name="radio-group" value="marvel" [(ngModel)]="theme">
+                <label class="option" for="marvel">Marvel</label>
               </div>
             </form>
         </div>
@@ -39,7 +39,7 @@
         </div>
         <div class="subtitle">Profil</div>
         <div class="title">Nombre de parties : {{ gameNumber }}</div>
-        <div class="title">Nombre de bonnes réponses : {{ goodAnswers }}</div>
+        <div class="title">Total de bonnes réponses : {{ goodAnswers }}</div>
         <div class="title">Score moyen : {{ averageScore }}</div>
     </div>
 

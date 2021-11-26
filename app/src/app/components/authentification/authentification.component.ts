@@ -39,6 +39,7 @@ export class AuthentificationComponent implements OnInit {
         return;
       }
       this.loading = true;
+      this.router.navigate(['home']);
       
     } catch (error) {
       this.loading = false;

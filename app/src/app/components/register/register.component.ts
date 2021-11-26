@@ -3,6 +3,7 @@ import {
   EventEmitter,
   HostListener, Output
 } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -24,7 +25,7 @@ export class RegisterComponent {
   @Output() closePopup = new EventEmitter();
   @Output() loginSuccess = new EventEmitter();
 
-  constructor(
+  constructor( private router: Router
   ) {
     this.windowWidth = window.innerWidth;
   }
@@ -60,6 +61,7 @@ export class RegisterComponent {
 
     this.loading = true;
     try {
+      this.router.navigate(['home']);
       // register to do
     } catch (error) {
       this.launchError(error);
