@@ -9,10 +9,8 @@ export class GameService {
   constructor(
     @Inject('GAME_SERVICE') private client: ClientProxy, 
   ){}
-  
 
   async create(createGameDto: CreateGameDto) {
-    // Retrieve theme and questions number
     return this.client.send({ role: 'game', cmd: 'create' },createGameDto);  
   }
 

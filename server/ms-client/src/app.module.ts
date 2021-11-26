@@ -8,6 +8,7 @@ import { ClientProxyFactory, ClientsModule, Transport } from '@nestjs/microservi
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { AuthModule } from './auth/auth.module';
 import { UserModule } from './user/user.module';
+import { StatModule } from './stat/stat.module';
 
 
 @Module({
@@ -15,10 +16,12 @@ import { UserModule } from './user/user.module';
     QuestionModule, 
     DbModule, 
     GameModule, 
+    StatModule,
     ConfigModule.forRoot(),
     ClientsModule.register([
       { name: 'AUTH_SERVICE', transport: Transport.TCP},
       { name: 'GAME_SERVICE', transport: Transport.TCP},
+      { name: 'STAT_SERVICE', transport: Transport.TCP}
     ]),
     AuthModule,
     UserModule

@@ -11,7 +11,7 @@ export class DbService {
         if (connection !== null) {
             return connection;
         }
-        const db = new JsonDB(new Config('data.json', true, true, '/'));
+        const db = new JsonDB(new Config('../../data.json', true, true, '/'));
         connection = db;
         return connection;
     }

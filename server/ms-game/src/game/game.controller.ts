@@ -18,15 +18,5 @@ export class GameController {
   async update(@Payload() updateGameDto: UpdateGameDto) {
     return await this.gameService.update(updateGameDto);
   }
-
-  // @Get()
-  // findAll() {
-  //   return this.gameService.findAll();
-  // }
-
-  // @Get(':id')
-  // findOne(@Param('id') id: string) {
-  //   return this.gameService.findOne(+id);
-  // }
 }
 

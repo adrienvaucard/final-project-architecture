@@ -25,8 +25,6 @@ export class GameService {
     let questions = this.databaseConnection.filter('/questions', (question) => question.theme.toLowerCase().includes(createGameDto.theme.toLowerCase()));
     let shuffledQuestions = questions.sort(() => 0.5 - Math.random())
     let selectedQuestions = shuffledQuestions.slice(0, createGameDto.questionsNumber)
-    console.log(createGameDto.questionsNumber)
-
     return selectedQuestions
   }
 
