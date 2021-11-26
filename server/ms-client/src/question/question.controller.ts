@@ -12,7 +12,7 @@ export class QuestionController {
   }
 
   @Get()
-  findAll() {
+  async findAll() {
     return this.questionService.findAll();
   }
 
