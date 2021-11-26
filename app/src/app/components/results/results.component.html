@@ -1,0 +1,16 @@
+<app-default-layout>
+    <div class="sub-content">
+        <div class="subtitle">Résultats</div>
+
+        <div class="title">{{result}}</div>
+        <div class="title">Vous avez obtenu {{goodAnswers}} bonnes réponses</div>
+
+        <div class="button"
+            (click)="goHome()">
+            <span>Retour à l'accueil</span>
+        </div>
+    </div>
+
+</app-default-layout>
+
+<popup-loading *ngIf="loading"></popup-loading>

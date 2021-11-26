@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-game',
@@ -184,7 +185,7 @@ export class GameComponent implements OnInit {
     "chosenAnswer": 0
   }]
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     this.getQuestions()
@@ -197,13 +198,13 @@ export class GameComponent implements OnInit {
   public validate() {
     let goodAnswers: number = 0;
     this.questionList.forEach(question => {
-      console.log('choix question ' + question.id + ' réponse ' + question.chosenAnswer)
       if (question.answer === question.chosenAnswer) goodAnswers++;
     })
+    console.log(goodAnswers)
 
     // envoi du résultat au serveur
     this.loading = true
-
+    this.router.navigate(['results']);
   }
 
 }

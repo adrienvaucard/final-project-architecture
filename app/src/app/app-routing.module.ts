@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthentificationComponent } from './components/authentification/authentification.component';
 import { GameComponent } from './components/game/game.component';
 import { HomeComponent } from './components/home/home.component';
+import { ResultsComponent } from './components/results/results.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'game',
     component: GameComponent,
+  },
+  {
+    path: 'results',
+    component: ResultsComponent,
   },
   {
     path: '**',
