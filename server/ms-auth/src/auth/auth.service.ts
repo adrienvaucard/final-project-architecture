@@ -37,10 +37,11 @@ export class AuthService {
     async login(user: User) {
         let validateUser = await this.validateUser(user.username, user.password)
         if (validateUser) {
-            console.log(user)
+            const docUser = await this.userService.findOneByUsername(user.username);
+            
             const payload = { 
                 username: user.username, 
-                id: user.id
+                id: docUser.id
             };
             return {
                 access_token: this.jwtService.sign(payload),
