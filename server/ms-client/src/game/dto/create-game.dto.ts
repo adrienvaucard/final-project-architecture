@@ -1,5 +1,5 @@
 export class CreateGameDto {
-    user: number;
+    user: string;
     theme: string;
-    points: number;
+    questionsCount: number;
 }

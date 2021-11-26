@@ -1,35 +1,31 @@
-import { Injectable } from '@nestjs/common';
+import { Inject, Injectable } from '@nestjs/common';
+import { ClientProxy } from '@nestjs/microservices';
 import { CreateGameDto } from './dto/create-game.dto';
-import { DbService } from 'src/db/db.service';
-import { JsonDB } from 'node-json-db';
-import {v4 as uuidv4} from 'uuid';
+import { UpdateGameDto } from './dto/update-game.dto copy';
 
 
 @Injectable()
 export class GameService {
-  private databaseConnection: JsonDB
-
   constructor(
-    private dbService: DbService
-  ) {
-    this.databaseConnection = dbService.getConnection();
-  }
+    @Inject('GAME_SERVICE') private client: ClientProxy, 
+  ){}
+  
 
-  create(createGameDto: CreateGameDto) {
+  async create(createGameDto: CreateGameDto) {
     // Retrieve theme and questions number
-    return this.databaseConnection.push("/games[]", {
-      id: uuidv4(),
-      date: new Date(),
-      ...createGameDto
-    });
+    return this.client.send({ role: 'game', cmd: 'create' },createGameDto);  
   }
 
-  findAll() {
-    return this.databaseConnection.getData("/games");
+  async update(updateGameDto: UpdateGameDto) {
+    return this.client.send({ role: 'game', cmd: 'update' }, updateGameDto); 
   }
 
-  findOne(id: number) {
-    const index = this.databaseConnection.getIndex('/games', id, 'id');
-    return this.databaseConnection.getData(`/games[${index}]`)
-  }
+  // findAll() {
+  //   return this.databaseConnection.getData("/games");
+  // }
+
+  // findOne(id: number) {
+  //   const index = this.databaseConnection.getIndex('/games', id, 'id');
+  //   return this.databaseConnection.getData(`/games[${index}]`)
+  // }
 }
