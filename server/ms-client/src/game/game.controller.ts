@@ -9,13 +9,11 @@ export class GameController {
 
   @Post()
   create(@Body() createGameDto: CreateGameDto) {
-    console.log(createGameDto)
     return this.gameService.create(createGameDto);
   }
 
   @Put()
   update(@Body() updateGameDto: UpdateGameDto) {
-    console.log(updateGameDto)
     return this.gameService.update(updateGameDto);
   }
 }

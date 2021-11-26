@@ -11,13 +11,11 @@ export class GameController {
 
   @MessagePattern({ role: 'game', cmd: 'create' })
   async create(@Payload() createGameDto: CreateGameDto) {
-    console.log(createGameDto)
     return await this.gameService.create(createGameDto);
   }
 
   @MessagePattern({ role: 'game', cmd: 'update' })
   async update(@Payload() updateGameDto: UpdateGameDto) {
-    console.log(updateGameDto)
     return await this.gameService.update(updateGameDto);
   }
 
