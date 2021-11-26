@@ -13,6 +13,7 @@ import { PopupComponent } from './components/popup/popup.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ResultsComponent } from './components/results/results.component';
 import { DefaultLayoutComponent } from './layouts/default-layout/default-layout.component';
+import { AuthenticationService } from './services/authentication.service';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { DefaultLayoutComponent } from './layouts/default-layout/default-layout.
     HttpClientModule,
   ],
   providers: [
+    AuthenticationService
   ],
   bootstrap: [AppComponent]
 })

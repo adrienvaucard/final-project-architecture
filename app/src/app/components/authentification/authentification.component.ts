@@ -1,12 +1,13 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthenticationService } from '../../services/authentication.service';
 
 @Component({
   selector: 'app-authentification',
   templateUrl: './authentification.component.html',
   styleUrls: ['./authentification.component.scss'],
 })
-export class AuthentificationComponent implements OnInit {
+export class AuthentificationComponent {
   public error: any = '';
   public loading = false;
 
@@ -17,29 +18,29 @@ export class AuthentificationComponent implements OnInit {
   public windowWidth;
 
   constructor(
-    private router: Router
+    private router: Router,
+    private auth: AuthenticationService
   ) {
     this.windowWidth = window.innerWidth;
   }
 
-  ngOnInit() {
-  }
-
-  public auth() {
+  public signin() {
     try {
-      //login
-      
       if (!this.login) {
         this.error = 'Identifiant requis';
         return;
       }
-      
       if (!this.password) {
         this.error = 'Mot de passe requis';
         return;
       }
       this.loading = true;
-      this.router.navigate(['home']);
+
+      // appel de la fonction de connexion
+      this.auth.signin(this.login, this.password).subscribe(token => {
+        localStorage.setItem('token', JSON.stringify(token))
+        this.router.navigate(['home']);
+      })
       
     } catch (error) {
       this.loading = false;
