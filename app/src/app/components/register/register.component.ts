@@ -62,10 +62,12 @@ export class RegisterComponent {
 
     this.loading = true;
     try {
-      this.router.navigate(['home']);
       this.auth.signup(this.login, this.password).subscribe((result: any) => {
-        if (result.statusCode != '200') {
-          this.launchError(result.error);
+        console.log(result)
+        if (!result.username || !result.password) {
+          this.errorType = 'Inscription';
+          this.apiErrorMessage = "Erreur lors de l'inscription";
+          this.errorOpened = true;
           this.errorPopup = true;
           this.loading = false;
         } else {

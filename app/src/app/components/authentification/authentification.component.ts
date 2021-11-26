@@ -35,8 +35,6 @@ export class AuthentificationComponent {
         return;
       }
       this.loading = true;
-
-      // appel de la fonction de connexion
       this.auth.signin(this.login, this.password).subscribe((token: any) => {
         localStorage.setItem('token', JSON.stringify(token))
         this.router.navigate(['home']);

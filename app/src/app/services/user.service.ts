@@ -15,7 +15,7 @@ export class UserService {
     });
 
     return this.http.get(
-      `localhost:3000/stats/` + userID,
+      `http://localhost:3000/stats/` + userID,
       {
         headers: headers
       }
@@ -28,7 +28,7 @@ export class UserService {
     });
 
     return this.http.post(
-      `localhost:3000/stats/` + userID,
+      `http://localhost:3000/stats/` + userID,
       {
         "result": result
       },

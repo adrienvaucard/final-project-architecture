@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class ResultsComponent implements OnInit {
 
   public result: 'Bravo' | 'Dommage' | null = null;
-  public goodAnswers: number | null = null;
+  public goodAnswers: any = null;
   public loading: boolean = false;
 
   constructor(private router: Router) {
@@ -21,8 +21,13 @@ export class ResultsComponent implements OnInit {
   }
 
   public getResults() {
-
-    return
+    this.goodAnswers = localStorage.getItem("result")
+    const questionsNumber: any = localStorage.getItem("questionsNumber")
+    if (parseInt(this.goodAnswers) < (parseInt(questionsNumber) / 2)) {
+      this.result = 'Dommage'
+    } else {
+      this.result = 'Bravo'
+    }
   }
 
   public goHome() {

@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   public theme: 'Burger Quiz' | 'Marvel' = 'Burger Quiz';
   public loading = false;
 
-  public gameNumber: string | null = '0';
+  public gamesNumber: string | null = '0';
   public goodAnswers: string | null = '0';
   public averageScore: string | null = '0';
 
@@ -36,17 +36,20 @@ export class HomeComponent implements OnInit {
   }
 
   public getProfile() {
-    this.loading = true;
+    // this.loading = true;
     try {
-      let decodedToken = jwt_decode(<string>localStorage.getItem("token"));
-      console.log(decodedToken);
+      const token = localStorage.getItem("token")
+      const parsedToken = JSON.parse(<string>token).access_token
+      let decodedToken: any = jwt_decode(<string>token);
 
-      // @ts-ignore
-      const response = this.userService.retrieveStats(token, token.sub);
-
-      //return response.data;
+      this.userService.retrieveStats(parsedToken, decodedToken.id).subscribe(res => {
+        console.log(res)
+        // this.gamesNumber = res.gamesNumber
+        // this.goodAnswers = res.goodAnswers
+        // this.averageScore = res.averageScore
+      })
     } catch (error) {
-
+      
     }
   }
 }
