@@ -9,6 +9,11 @@
             "id": "43368b3c-327c-4519-be72-5b5042e1ca0d",
             "username": "adrien",
             "password": "$2b$10$ug8P47BtXXuz7kyofAWwQOrCuQ4xhMb8b7/gTtmB0OikAcT3rlF1y"
+        },
+        {
+            "id": "a119db1b-9318-45ce-8873-ed16a372d5d7",
+            "username": "bonjour",
+            "password": "$2b$10$XrBmc1YCZo6M3uIVVdZf6.Ubk5rsipThx4Nk5kHVwap8lI90vycfG"
         }
     ],
     "questions": [
@@ -1450,6 +1455,20 @@
             "theme": "Burger Quiz",
             "questionsNumber": 10,
             "points": 4
+        },
+        {
+            "id": "2ceb5498-e5d8-4688-80e1-376ad1987b21",
+            "user": "43368b3c-327c-4519-be72-5b5042e1ca0d",
+            "theme": "Burger Quiz",
+            "questionsNumber": 10,
+            "points": 24
+        },
+        {
+            "id": "dd7e975e-b3a0-45c1-b4fc-68992d4da6b9",
+            "user": "43368b3c-327c-4519-be72-5b5042e1ca0d",
+            "theme": "Burger Quiz",
+            "questionsNumber": 5,
+            "points": 24
         }
     ]
 }
