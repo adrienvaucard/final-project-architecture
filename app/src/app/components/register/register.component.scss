@@ -1,0 +1,14 @@
+.completed-button {
+  border: 1px solid var(--color-blue);
+  background-color: var(--color-blue);
+  color: var(--color-white);
+}
+
+.completed-button:hover {
+  box-shadow: 0px 0px 3px rgb(0, 0, 0, 45%);
+}
+
+.input-get-ids {
+  border: 1px solid var(--color-border-lighter);
+  border-radius: 5px;
+}

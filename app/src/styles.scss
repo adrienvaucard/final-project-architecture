@@ -1,1 +1,316 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./theme/colors.scss";
+@import "./theme/fonts.scss";
+@import "./theme/radio.scss";
+@import "./theme/space.scss";
+@import "./theme/flexbox.scss";
+@import "./theme/variables.scss";
+
+@font-face {
+  font-family: "Discovery";
+  src: url("./assets/icons8/fonts/Discovery.eot");
+  src: url("./assets/icons8/fonts/Discovery.eot?#iefix")
+      format("embedded-opentype"),
+    url("./assets/icons8/fonts/Discovery.woff2") format("woff2"),
+    url("./assets/icons8/fonts/Discovery.woff") format("woff"),
+    url("./assets/icons8/fonts/Discovery.ttf") format("truetype"),
+    url("./assets/icons8/fonts/Discovery.svg#font") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: "Discovery";
+    src: url("./assets/icons8/fonts/Discovery.svg#Discovery") format("svg");
+  }
+}
+
+[data-icons8]:before {
+  content: attr(data-icons8);
+}
+
+.icons8-cancel:before,
+.icons8-sort-down:before,
+.icons8-delete:before,
+.icons8,
+[data-icons8]:before {
+  display: inline-block;
+  font-family: "Discovery";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.icons8-cancel:before {
+  content: "\f103";
+}
+.icons8-sort-down:before {
+  content: "\f104";
+}
+.icons8-delete:before {
+  content: "\f105";
+}
+
+button,
+input,
+textarea {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  overflow: auto;
+}
+
+body {
+  overflow: hidden;
+  font-family: "Livvic";
+  color: var(--color-white);
+  background: linear-gradient(var(--color-blue), var(--color-light-blue));
+  background-size: 120% 120%;
+}
+
+.popup-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/********************************************/
+/****************** POPUP ******************/
+/********************************************/
+
+.modal-background {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  background-color: #2d2d2d;
+  opacity: 0.3;
+  z-index: 999;
+}
+
+.modal-container {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  width: 100%;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.modal {
+  border-radius: 5px;
+  pointer-events: visible;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  min-height: 20%;
+  z-index: 1000;
+  padding: 2vh 20px;
+  background-color: var(--color-white);
+  text-align: center;
+  box-shadow: 0 0 30px 0 rgba(70, 70, 70, 0.87);
+}
+
+.modal-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.modal-content::-webkit-scrollbar {
+  background-color: var(--color-white);
+  width: 5px;
+}
+
+.modal-content::-webkit-scrollbar:horizontal {
+  height: 0px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: var(--grey-pastel);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.medium-text {
+  font-weight: 500;
+}
+
+.semi-bold {
+  font-weight: 600;
+}
+
+.flex-page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.secondary-button {
+  margin: 4px 0;
+  padding: 8px;
+  border: 1px solid white;
+  border-radius: 5px;
+  font-size: 26px;
+  text-align: center;
+  cursor: pointer;
+}
+
+input {
+  font-family: "Livvic";
+}
+
+.input-login {
+  margin: 8px 0;
+  color: black;
+  display: flex;
+  align-items: stretch;
+  margin-bottom: 15px;
+}
+
+.input-login i {
+  color: var(--color-grey);
+}
+
+.input-login input {
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  color: var(--black);
+  font-size: var(--big-title-text);
+  padding: 10px;
+  outline: none;
+}
+
+.clear {
+  width: 48px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  border-left: 1px solid var(--color-border-lighter);
+  font-size: 38px;
+  size: auto;
+  cursor: pointer;
+}
+
+@media (max-width: 550px) and (orientation: portrait) {
+  .clear {
+    width: 30px;
+    font-size: 28px;
+    padding: 0 5px;
+  }
+}
+
+.visibility-hidden {
+  visibility: hidden;
+}
+
+.center {
+  text-align: center;
+}
+
+.sub-content {
+  width: 800px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
+}
+
+.sub-content .title {
+  margin-top: 4px;
+  font-size: 26px;
+}
+
+.label {
+  font-size: 24px;
+}
+
+input {
+  display: flex;
+}
+.subtitle {
+  font-size: 30px;
+  margin: 10px 0;
+  white-space: nowrap;
+}
+
+.button {
+  border-radius: 5px;
+  background-color: var(--color-darker-blue);
+  font-size: 30px;
+  font-weight: 500;
+  border: none;
+  color: var(--white);
+  text-align: center;
+  margin: 8px 0;
+  padding: 8px 0;
+  cursor: pointer;
+}
+
+.button:hover {
+  box-shadow: 0px 0px 3px rgb(0, 0, 0, 45%);
+}
+
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+@media (max-width: 550px) and (orientation: portrait) {
+  .sub-content {
+    width: 90%;
+  }
+
+  .subtitle {
+    font-size: 26px;
+    margin: 8px 0;
+    white-space: normal;
+  }
+
+  .button {
+    font-size: 26px;
+  }
+}
+
+.error-block {
+  border-radius: 5px;
+  border: 1px solid var(--color-error);
+  padding: 10px;
+  background-color: var(--color-white);
+  color: var(--color-error);
+  margin-top: 10px;
+}

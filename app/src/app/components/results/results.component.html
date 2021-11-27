@@ -1,0 +1,29 @@
+<app-default-layout>
+    <div class="sub-content">
+        <div class="subtitle">Résultats</div>
+
+        <div class="title">{{result}}</div>
+        <div class="title">Vous avez obtenu {{goodAnswers}} bonnes réponses</div>
+
+        <div *ngFor="let question of questionList">
+            <div>
+                <div class="title">{{question.question}}</div>
+                <form action="{{question.id}}" class="radio-container">
+                    <div *ngFor="let answer of question.proposals">
+                    <div class="sub-radio">
+                      <label class="option" [ngClass]="{ 'green': question.answer === answer.id, 'red': question.chosenAnswer === answer.id && answer.id !== question.answer }" for="{{question.id}}-{{answer.id}}">{{answer.text}}</label>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="button"
+            (click)="goHome()">
+            <span>Retour à l'accueil</span>
+        </div>
+    </div>
+
+</app-default-layout>
+
+<popup-loading *ngIf="loading"></popup-loading>

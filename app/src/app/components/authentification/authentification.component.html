@@ -1,0 +1,43 @@
+<app-default-layout>
+  <div class="sub-content">
+    <div class="subtitle">Connexion</div>
+    <div>
+      <div class="title">Identifiant</div>
+      <div class="input input-login">
+        <input id="login" [(ngModel)]="login" />
+        <div class="clear" (click)="clearLogin()">
+          <i class="icons8-cancel"></i>
+        </div>
+      </div>
+    </div>
+    <div>
+    </div>
+    <div>
+      <div class="title">
+        Mot de passe
+      </div>
+      <div class="input input-login">
+        <input id="password" type="password" [(ngModel)]="password" />
+        <div class="clear" (click)="clearPassword()">
+          <i class="icons8-cancel"></i>
+        </div>
+      </div>
+    </div>
+    <div class="error error-block" *ngIf="error">
+      {{error}}
+    </div>
+    <div class="button"
+      (click)="signin()">
+      <i *ngIf="loading" class="material-icons spin">...</i>
+      <span *ngIf="!loading">Me connecter</span>
+    </div>
+    <div class="secondary-button" (click)="openRegisterModal()">
+      S'inscrire
+    </div>
+  </div>
+</app-default-layout>
+
+<app-register *ngIf="getRegisterOpened" (closePopup)="closeRegisterModal()">
+</app-register>
+
+<popup-loading *ngIf="loading"></popup-loading>

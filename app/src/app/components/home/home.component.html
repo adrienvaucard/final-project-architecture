@@ -1,0 +1,48 @@
+<app-default-layout>
+    <div class="sub-content">
+        <div class="subtitle">Accueil</div>
+        <div>
+            <div class="title">Nombre de questions</div>
+            <form action="#" class="radio-container">
+              <div>
+                <input type="radio" id="5" name="radio-group" value="5" [(ngModel)]="questionsNumber">
+                <label class="option" for="5">5</label>
+              </div>
+              <div>
+                <input type="radio" id="10" name="radio-group" value="10" [(ngModel)]="questionsNumber">
+                <label class="option" for="10">10</label>
+              </div>
+              <div>
+                <input type="radio" id="20" name="radio-group" value="20" [(ngModel)]="questionsNumber">
+                <label class="option" for="20">20</label>
+              </div>
+            </form>
+        </div>
+
+        <div>
+            <div class="title">Thème</div>
+            <form action="#" class="radio-container">
+              <div>
+                <input type="radio" id="Burger Quiz" name="radio-group" value="Burger Quiz" [(ngModel)]="theme">
+                <label class="option" for="Burger Quiz">Burger Quiz</label>
+              </div>
+              <div>
+                <input type="radio" id="Marvel" name="radio-group" value="Marvel" [(ngModel)]="theme">
+                <label class="option" for="Marvel">Marvel</label>
+              </div>
+            </form>
+        </div>
+
+        <div class="button"
+            (click)="play()">
+            <span>Jouer</span>
+        </div>
+        <div class="subtitle">Profil</div>
+        <div class="title">Nombre de parties : {{ gamesNumber }}</div>
+        <div class="title">Total de bonnes réponses : {{ goodAnswers }}</div>
+        <div class="title">Score moyen : {{ averageScore }}</div>
+    </div>
+
+</app-default-layout>
+
+<popup-loading *ngIf="loading"></popup-loading>
