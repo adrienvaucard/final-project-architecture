@@ -17,7 +17,7 @@ export class UserService {
   }
 
   async create(createUserDto: CreateUserDto) {
-    createUserDto.password = await bcrypt.hashSync(createUserDto.password, saltOrRounds);
+    createUserDto.password = await bcrypt.hash(createUserDto.password, saltOrRounds);
     return this.databaseConnection.push("/users[]", {
       id: uuidv4(),
       ...createUserDto

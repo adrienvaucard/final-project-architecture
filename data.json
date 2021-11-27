@@ -4,6 +4,11 @@
             "id": "4180a031-f81b-4aa4-bb5d-07caeb817d25",
             "username": "alexandre",
             "password": "$2b$10$7crUPWz2t6wfQhhuwhF0COxAKH/LOTdhiYuCLNh33smSjzfjaLD7i"
+        },
+        {
+            "id": "43368b3c-327c-4519-be72-5b5042e1ca0d",
+            "username": "adrien",
+            "password": "$2b$10$ug8P47BtXXuz7kyofAWwQOrCuQ4xhMb8b7/gTtmB0OikAcT3rlF1y"
         }
     ],
     "questions": [
@@ -1368,6 +1373,83 @@
             "theme": "Burger Quiz",
             "questionsNumber": 10,
             "points": 2
+        },
+        {
+            "id": "07d894a3-1318-4939-a4a4-ecd9e39185ed",
+            "user": "43368b3c-327c-4519-be72-5b5042e1ca0d",
+            "theme": "Burger Quiz",
+            "questionsNumber": 10,
+            "points": 2
+        },
+        {
+            "id": "6afd4b0c-9966-41bd-9132-229b859761da",
+            "user": "43368b3c-327c-4519-be72-5b5042e1ca0d",
+            "theme": "Burger Quiz",
+            "questionsNumber": 10,
+            "points": 40
+        },
+        {
+            "id": "30860545-7ee9-44b5-8026-6adc69cc87c5",
+            "user": "43368b3c-327c-4519-be72-5b5042e1ca0d",
+            "theme": "Burger Quiz",
+            "questionsNumber": 10,
+            "points": 120
+        },
+        {
+            "id": "c3742a38-f874-4021-822c-201f9e28c482",
+            "user": "43368b3c-327c-4519-be72-5b5042e1ca0d",
+            "theme": "Burger Quiz",
+            "questionsNumber": 10,
+            "points": 45
+        },
+        {
+            "id": "9a0f8d06-4a32-4ab4-b8c3-712e9fc30cf3",
+            "user": "43368b3c-327c-4519-be72-5b5042e1ca0d",
+            "theme": "Burger Quiz",
+            "questionsNumber": 10,
+            "points": 45
+        },
+        {
+            "id": "6d97ded8-b165-4871-9837-69418223c052",
+            "user": "43368b3c-327c-4519-be72-5b5042e1ca0d",
+            "theme": "Burger Quiz",
+            "questionsNumber": 10,
+            "points": 45
+        },
+        {
+            "id": "03f8c3c7-9e04-4543-b99d-afe93c05ce44",
+            "user": "43368b3c-327c-4519-be72-5b5042e1ca0d",
+            "theme": "Burger Quiz",
+            "questionsNumber": 10,
+            "points": 45
+        },
+        {
+            "id": "17ad818a-8ff3-4ba7-9356-963806718eed",
+            "user": "43368b3c-327c-4519-be72-5b5042e1ca0d",
+            "theme": "Burger Quiz",
+            "questionsNumber": 10,
+            "points": 2
+        },
+        {
+            "id": "2059cf66-e37c-449f-920f-0666f50a79ae",
+            "user": "43368b3c-327c-4519-be72-5b5042e1ca0d",
+            "theme": "Burger Quiz",
+            "questionsNumber": 10,
+            "points": 3
+        },
+        {
+            "id": "d3fdf393-f8ca-4a8a-b4b1-fd178a102413",
+            "user": "43368b3c-327c-4519-be72-5b5042e1ca0d",
+            "theme": "Burger Quiz",
+            "questionsNumber": 10,
+            "points": 4
+        },
+        {
+            "id": "41b687a2-7cb3-409d-ad72-8692889656b1",
+            "user": "43368b3c-327c-4519-be72-5b5042e1ca0d",
+            "theme": "Burger Quiz",
+            "questionsNumber": 10,
+            "points": 4
         }
     ]
 }

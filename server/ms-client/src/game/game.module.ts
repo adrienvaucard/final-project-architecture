@@ -1,7 +1,6 @@
 import { Module } from '@nestjs/common';
 import { GameService } from './game.service';
 import { GameController } from './game.controller';
-import { DbService } from 'src/db/db.service';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { ClientProxyFactory, Transport } from '@nestjs/microservices';
 
@@ -12,7 +11,6 @@ import { ClientProxyFactory, Transport } from '@nestjs/microservices';
   controllers: [GameController],
   providers: [
     GameService, 
-    DbService,
     {
       provide: 'GAME_SERVICE',
       inject: [ConfigService],
