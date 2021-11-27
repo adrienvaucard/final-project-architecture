@@ -21,7 +21,7 @@ export class StatService {
         })
 
         let stats = {
-            gamesNUmber: userGames.length,
+            gamesNumber: userGames.length,
             goodAnswers: totalAnswers,
             averageScore: Math.round(totalAnswers / userGames.length)
         }

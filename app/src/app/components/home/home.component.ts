@@ -42,11 +42,10 @@ export class HomeComponent implements OnInit {
       const parsedToken = JSON.parse(<string>token).access_token
       let decodedToken: any = jwt_decode(<string>token);
 
-      this.userService.retrieveStats(parsedToken, decodedToken.id).subscribe(res => {
-        console.log(res)
-        // this.gamesNumber = res.gamesNumber
-        // this.goodAnswers = res.goodAnswers
-        // this.averageScore = res.averageScore
+      this.userService.retrieveStats(parsedToken, decodedToken.id).subscribe((res: any) => {
+        this.gamesNumber = res.gamesNumber
+        this.goodAnswers = res.goodAnswers
+        this.averageScore = res.averageScore
       })
     } catch (error) {
       
