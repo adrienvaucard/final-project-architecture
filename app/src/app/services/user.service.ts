@@ -22,19 +22,19 @@ export class UserService {
     );
   }
 
-  public addStat(token: string, userID: number, result: any) {
-    const headers = new HttpHeaders({
-      Authorization: "Bearer " + token
-    });
+  // public addStat(token: string, userID: number, result: any) {
+  //   const headers = new HttpHeaders({
+  //     Authorization: "Bearer " + token
+  //   });
 
-    return this.http.post(
-      `http://localhost:3000/stats/` + userID,
-      {
-        "result": result
-      },
-      {
-        headers: headers
-      }
-    );
-  }
+  //   return this.http.put(
+  //     `http://localhost:3000/stats/` + userID,
+  //     {
+  //       "result": result
+  //     },
+  //     {
+  //       headers: headers
+  //     }
+  //   );
+  // }
 }

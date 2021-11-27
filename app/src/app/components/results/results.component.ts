@@ -26,7 +26,6 @@ export class ResultsComponent implements OnInit {
     const questions: any = localStorage.getItem("questions")
 
     this.questionList = JSON.parse(questions)
-    console.log(questions, this.questionList)
     this.goodAnswers = localStorage.getItem("result")
     const questionsNumber: any = localStorage.getItem("questionsNumber")
     if (parseInt(this.goodAnswers) < (parseInt(questionsNumber) / 2)) {

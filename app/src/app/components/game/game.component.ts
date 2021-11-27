@@ -29,6 +29,7 @@ export class GameComponent implements OnInit {
 
     this.game.newGame(decodedToken.id, theme, questionsNumber, parsedToken).subscribe(res => {
       this.questionList = res
+      
     });
 
     this.questionList.forEach((question: JsonObject) => {
