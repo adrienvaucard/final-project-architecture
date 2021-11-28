@@ -129,7 +129,7 @@ This problem can be fixed by using a regular database system, because this type 
 
 ## Contributors
 
-[@Kwoak](https://github.com/Kwoak)
-[@AlexSuchot](https://github.com/AlexSuchot)
-[@adrienvaucard](https://github.com/adrienvaucard)
+- [@Kwoak](https://github.com/Kwoak)
+- [@AlexSuchot](https://github.com/AlexSuchot)
+- [@adrienvaucard](https://github.com/adrienvaucard)
 
