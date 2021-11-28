@@ -2075,6 +2075,13 @@
             "theme": "Burger Quiz",
             "questionsNumber": "5",
             "points": 2
+        },
+        {
+            "id": "09d957d8-65b2-43f8-95ec-c0b7db4b2c28",
+            "user": "43368b3c-327c-4519-be72-5b5042e1ca0d",
+            "theme": "Burger Quiz",
+            "questionsNumber": "5",
+            "points": 0
         }
     ]
 }
