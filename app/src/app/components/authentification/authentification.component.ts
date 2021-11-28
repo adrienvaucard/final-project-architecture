@@ -35,9 +35,17 @@ export class AuthentificationComponent {
         return;
       }
       this.loading = true;
-      this.auth.signin(this.login, this.password).subscribe((token: any) => {
-        localStorage.setItem('token', JSON.stringify(token))
-        this.router.navigate(['home']);
+      this.auth.signin(this.login, this.password).subscribe((data: any) => {
+        if (!data) {
+          this.loading = false
+          this.error = "Identifiants invalides";
+        } else if (data && data?.access_token) {
+          localStorage.setItem('token', JSON.stringify(data.access_token))
+          this.router.navigate(['home']);
+        } else {
+          this.loading = false
+          this.error = "Erreur lors de la connexion";
+        }
       })
 
     } catch (error) {
