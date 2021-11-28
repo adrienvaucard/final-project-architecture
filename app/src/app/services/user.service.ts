@@ -1,5 +1,6 @@
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
@@ -15,7 +16,7 @@ export class UserService {
     });
 
     return this.http.get(
-      `http://localhost:3000/stats/` + userID,
+      `${environment.apiUrl}/stats/` + userID,
       {
         headers: headers
       }

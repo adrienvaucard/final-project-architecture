@@ -1,5 +1,6 @@
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
@@ -14,7 +15,7 @@ export class GameService {
       Authorization: "Bearer " + token
     });
     return this.http.post(
-      `http://localhost:3000/games`,
+      `${environment.apiUrl}/games`,
       {
         user,
         theme,
@@ -33,7 +34,7 @@ export class GameService {
     });
 
     return this.http.put(
-      `http://localhost:3000/games/`,
+      `${environment.apiUrl}/games/`,
       {
         "id": gameId,
         "points": result

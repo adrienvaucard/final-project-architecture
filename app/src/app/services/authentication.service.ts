@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
@@ -9,7 +10,7 @@ export class AuthenticationService {
 
   public signin(username: string, password: string) {
     return this.http.post(
-      `http://localhost:3000/auth/login`,
+      `${environment.apiUrl}/auth/login`,
       {
           username,
           password
@@ -19,7 +20,7 @@ export class AuthenticationService {
 
   public signup(username: string, password: string) {
     return this.http.post(
-      `http://localhost:3000/auth/register`,
+      `${environment.apiUrl}/auth/register`,
       {
           username,
           password
