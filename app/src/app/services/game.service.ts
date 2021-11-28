@@ -26,4 +26,21 @@ export class GameService {
       }
     );
   }
+
+  public updateGame(token: any, gameId: number, result: number) {
+    const headers = new HttpHeaders({
+      Authorization: "Bearer " + token
+    });
+
+    return this.http.put(
+      `http://localhost:3000/games/`,
+      {
+        "id": gameId,
+        "points": result
+      },
+      {
+        headers: headers
+      }
+    );
+  }
 }

@@ -17,15 +17,20 @@ export class GameService {
   }
 
   async create(createGameDto: CreateGameDto) {
+    let gameId = uuidv4();
+
     await this.databaseConnection.push("/games[]", {
-      id: uuidv4(),
+      id: gameId,
       ...createGameDto
     });
 
     let questions = this.databaseConnection.filter('/questions', (question) => question.theme.toLowerCase().includes(createGameDto.theme.toLowerCase()));
     let shuffledQuestions = questions.sort(() => 0.5 - Math.random())
     let selectedQuestions = shuffledQuestions.slice(0, createGameDto.questionsNumber)
-    return selectedQuestions
+    return {
+      id: gameId,
+      questions: selectedQuestions
+    }
   }
 
   async update(updateGameDto: UpdateGameDto) {

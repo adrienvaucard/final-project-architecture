@@ -13,6 +13,7 @@ export class GameComponent implements OnInit {
 
   public loading = false;
   public questionList: any = [];
+  public gameId: number = 0;
 
   constructor(private router: Router, private game: GameService) {}
 
@@ -27,9 +28,9 @@ export class GameComponent implements OnInit {
     const parsedToken = JSON.parse(<string>token).access_token
     const decodedToken: any = jwt_decode(<string>token);
 
-    this.game.newGame(decodedToken.id, theme, questionsNumber, parsedToken).subscribe(res => {
-      this.questionList = res
-      
+    this.game.newGame(decodedToken.id, theme, questionsNumber, parsedToken).subscribe((res: any) => {
+      this.questionList = res.questions;
+      this.gameId = res.id
     });
 
     this.questionList.forEach((question: JsonObject) => {
@@ -37,7 +38,11 @@ export class GameComponent implements OnInit {
     });
   }
 
-  public validate() {
+  public async validate() {
+    const token = localStorage.getItem("token");
+    const parsedToken = JSON.parse(<string>token).access_token
+    const decodedToken: any = jwt_decode(<string>token);
+
     this.loading = true;
 
     let goodAnswers: number = 0;
@@ -49,7 +54,9 @@ export class GameComponent implements OnInit {
 
     localStorage.setItem('questions', JSON.stringify(this.questionList))
 
-    this.router.navigate(['results']);
+    this.game.updateGame(decodedToken, this.gameId, goodAnswers).subscribe((res: any) => {
+      this.router.navigate(['results']);
+    })
   }
 
 }

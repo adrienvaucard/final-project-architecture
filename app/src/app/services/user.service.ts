@@ -21,20 +21,4 @@ export class UserService {
       }
     );
   }
-
-  // public addStat(token: string, userID: number, result: any) {
-  //   const headers = new HttpHeaders({
-  //     Authorization: "Bearer " + token
-  //   });
-
-  //   return this.http.put(
-  //     `http://localhost:3000/stats/` + userID,
-  //     {
-  //       "result": result
-  //     },
-  //     {
-  //       headers: headers
-  //     }
-  //   );
-  // }
 }
