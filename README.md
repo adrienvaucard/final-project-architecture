@@ -11,6 +11,8 @@ Then, you have to build and run the containers.
 docker-compose build
 docker-compose up
 ```
+:warning: The first `docker-compose build` may take some time to finish because it build the entire image. So you can take a coffee while its running :coffee: (This is a point on which we would work if we had to continue this project for a while)
+
 :warning: If you rights encounters errors with this command, try running it with `sudo`.
 
 The quiz will be up and running at [http://localhost:4200](http://localhost:4200)
